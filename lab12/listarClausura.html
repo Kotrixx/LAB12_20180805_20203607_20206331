@@ -18,7 +18,6 @@
           var lista = data;
           var contentHtml = "";
           $.each(lista, function (i, liga) {
-            // Filtra solo aquellos equipos cuyo campo 'liga' sea igual a 1
             if (liga.liga == 2) {
               contentHtml += "<tr>";
               contentHtml += "<td>" + liga.equipo.nombre + "</td>";

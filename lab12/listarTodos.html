@@ -18,11 +18,9 @@
                     var lista = data;
                     var equiposAcumulados = {};
 
-                    // Itera sobre la lista de ligas
                     $.each(lista, function (i, liga) {
                         var equipoNombre = liga.equipo.nombre;
 
-                        // Inicializa el objeto acumulado para el equipo si no existe
                         if (!equiposAcumulados[equipoNombre]) {
                             equiposAcumulados[equipoNombre] = {
                                 partidos_ganados: 0,
@@ -35,7 +33,6 @@
                             };
                         }
 
-                        // Actualiza las estadísticas acumuladas
                         equiposAcumulados[equipoNombre].partidos_ganados += liga.partidos_ganados;
                         equiposAcumulados[equipoNombre].partidos_perdidos += liga.partidos_perdidos;
                         equiposAcumulados[equipoNombre].partidos_empatados += liga.partidos_empatados;
@@ -45,7 +42,6 @@
                         equiposAcumulados[equipoNombre].puntos += liga.puntos;
                     });
 
-                    // Construye la tabla HTML con los datos acumulados
                     var contentHtml = "";
                     $.each(equiposAcumulados, function (equipoNombre, estadisticas) {
                         contentHtml += "<tr>";
