@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edfff639-de4e-4b50-bc8b-4adecab614c4" name="Changes" comment="ya esta clausura y apertura">
+    <list default="true" id="edfff639-de4e-4b50-bc8b-4adecab614c4" name="Changes" comment="ya esta clausura y apertura y acumulado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab12/masDetalles.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab12/masDetalles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab12/listarApertura.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab12/listarApertura.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab12/listarClausura.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab12/listarClausura.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab12/listarTodos.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab12/listarTodos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699758116083</updated>
-      <workItem from="1699758116664" duration="4034000" />
+      <workItem from="1699758116664" duration="5630000" />
     </task>
     <task id="LOCAL-00001" summary="dasda">
       <created>1699758696953</created>
@@ -82,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699762275525</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ya esta clausura y apertura">
+      <created>1699764848280</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699764848280</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +100,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dasda" />
     <MESSAGE value="ya esta clausura y apertura" />
-    <option name="LAST_COMMIT_MESSAGE" value="ya esta clausura y apertura" />
+    <MESSAGE value="ya esta clausura y apertura y acumulado" />
+    <option name="LAST_COMMIT_MESSAGE" value="ya esta clausura y apertura y acumulado" />
   </component>
 </project>
