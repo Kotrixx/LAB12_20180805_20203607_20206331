@@ -18,7 +18,7 @@
           var lista = data;
           var contentHtml = "";
           $.each(lista, function (i, liga) {
-            if (liga.liga == 1) {
+            if (liga.liga === 1) {
               contentHtml += "<tr>";
               contentHtml += "<td>" + liga.equipo.nombre + "</td>";
               contentHtml += "<td>" + liga.partidos_ganados + "</td>";
@@ -28,9 +28,9 @@
               contentHtml += "<td>" + liga.goles_contra + "</td>";
               contentHtml += "<td>" + liga.goles_diferencia + "</td>";
               contentHtml += "<td>" + liga.puntos + "</td>";
-              if (liga.liga == 2) {
+              if (liga.liga === 2) {
                 contentHtml += "<td>Clausura</td>";
-              } else if (liga.liga == 1) {
+              } else if (liga.liga === 1) {
                 contentHtml += "<td>Apertura</td>";
               }
               contentHtml += "<td><a class='btn btn-warning' href='masDetalles.html?id=" + (liga.equipo.id) + "'>Mas detalles</a></td>";
