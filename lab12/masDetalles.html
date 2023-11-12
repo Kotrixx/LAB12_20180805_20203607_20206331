@@ -10,7 +10,10 @@
         $(document).ready(function () {
             let url = new URLSearchParams(window.location.search);
             let id = url.get('id');
-
+            if(id==null){
+                window.location.href = "listarTodos.html";
+            }
+            else{
             $.ajax({
                 method: "GET",
                 dataType: "json",
@@ -21,13 +24,40 @@
                 contentHtml += "<td>1</td>";  // Otra vez, no necesitas (i + 1) porque estás tratando con un solo objeto.
                 contentHtml += "<td>" + equipo.nombre + "</td>";
                 contentHtml += "<td>" + equipo.estadio + "</td>";
-                contentHtml += "</tr>";
+
                 $("table tbody").html(contentHtml);
             }).fail(function (err) {
                 var jsonData = err.responseJSON;
                 console.log(jsonData.msg);
                 alert(jsonData.msg);
             });
+
+            //asdasdad
+            $.ajax({
+                method: "GET",
+                dataType: "json",
+                crossDomain: true,
+                url: "http://127.0.0.1:8000/api/liga/"+id
+                // Reemplaza "URL_DE_LA_SEGUNDA_API_AQUI" con la URL real de tu segunda API
+            }).done(function (liga) {
+                var contentHtml = "<tr>";
+                contentHtml += "<td>" + liga.partidos_jugados + "</td>";
+                contentHtml += "<td>" + liga.partidos_ganados + "</td>";
+                contentHtml += "<td>" + liga.partidos_perdidos + "</td>";
+                contentHtml += "<td>" + liga.partidos_empatados + "</td>";
+                contentHtml += "<td>" + liga.goles_favor + "</td>";
+                contentHtml += "<td>" + liga.goles_contra + "</td>";
+                contentHtml += "<td>" + liga.goles_diferencia + "</td>";
+                contentHtml += "<td>" + liga.puntos + "</td>";
+                contentHtml += "</tr>";
+                $("table tbody").html(contentHtml);
+                console.log('Datos de la segunda API:', liga);
+            }).fail(function (err) {
+                var jsonData = err.responseJSON;
+                console.log(jsonData.msg);
+                alert(jsonData.msg);
+            });
+        }
         });
     </script>
 </head>
@@ -47,6 +77,14 @@
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Estadio</th>
+                <th>#Partidos jugados</th>
+                <th>#Partidos ganados</th>
+                <th>#Partidos perdidos</th>
+                <th>#Partidos empatados</th>
+                <th>#Goles a favor</th>
+                <th>#Goles en contra</th>
+                <th>#Diferencia de goles</th>
+                <th>Puntos</th>
             </tr>
             </thead>
             <tbody>
