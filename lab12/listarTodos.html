@@ -36,7 +36,7 @@
                             else if(liga.liga==1) {
                                 contentHtml += "<td>Apertura</td>";
                             }
-                            contentHtml += "<td><a class='btn btn-warning' href='masDetalles.html?id="+(i + 1)+"'>Mas detalles</a></td>";
+                            contentHtml += "<td><a class='btn btn-warning' href='masDetalles.html?id="+(liga.equipo.id)+"'>Mas detalles</a></td>";
                             contentHtml += "</tr>";
                         });
                         $("table tbody").html(contentHtml);
